@@ -54,6 +54,8 @@ Note: I have minified the CSS for better readability.
 
 The web page itself nor it‘s headers seem to be interesting. There are no scripts or links to files on the server. The only potential solution that I thought of was that there must be a `.DS_Store` file since the web admin “likes apples and always forgets to throw away **apple cores**”.
 
+## Solution
+
 You will find the URL of a `.DS_Store` file in the `robots.txt` ([source](https://github.com/KevSlashNull/35c3-junior-ctf/blob/master/macdonald/robots.txt)). There are multiple libraries that can be used to analyze a `.DS_Store`. The creator of the challenge, gehaxelt, even has an [own implementation of that](https://github.com/gehaxelt/Python-dsstore) on his GitHub.
 
 After analyzing, you‘ll get a list of multiple file paths on the server. You can explore all files [here](https://github.com/KevSlashNull/35c3-junior-ctf/blob/master/mcdonald/35.207.132.47_85). More importantly, that list contains a file called `flag.txt` ([source](https://github.com/KevSlashNull/35c3-junior-ctf/blob/master/mcdonald/35.207.132.47_85/backup/b/a/c/flag.txt)) in the directories `backup/b/a/c/`. It contains the flag.
